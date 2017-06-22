@@ -1,5 +1,5 @@
 'use strict';
 
-module.exports = function(ctx, cb) {
-  cb(null, { hello: ctx.data.name || 'Huckleberry' });
+module.exports = function() {
+  console.log("from inside the webtask");
 };
