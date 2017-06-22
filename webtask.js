@@ -12,5 +12,9 @@ var view = (function view() {/*
 */}).toString().match(/[^]*\/\*([^]*)\*\/\s*\}$/)[1];
 
 module.exports = function(ctx, cb) {
-  cb(null, { hello: ctx.data.name || 'Ron Dunphy' });
+  cb(null, { hire: ctx.data.name || 'Ron Dunphy' });
 };
+
+
+https://wt-6d054f0b626b5cb45efa677522eed1be-0.run.webtask.io/webtask-url
+https://wt-6d054f0b626b5cb45efa677522eed1be-0.run.webtask.io/webstack-url
