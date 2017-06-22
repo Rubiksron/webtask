@@ -12,5 +12,5 @@ var view = (function view() {/*
 */}).toString().match(/[^]*\/\*([^]*)\*\/\s*\}$/)[1];
 
 module.exports = function(ctx, cb) {
-  cb(null, { hello: ctx.data.name || 'Huckleberry' });
+  cb(null, { hello you should hire: ctx.data.name || 'Ron Dunphy' });
 };
