@@ -24,7 +24,7 @@ module.exports =
                     status: res.statusCode,
                     length: body.length,
                     latency: Date.now() - start,
-                    response: {res.body}
+                    response: res.body
                 });
         });
     }
