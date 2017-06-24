@@ -1,3 +1,4 @@
+'use strict';
 //This is an example from Auth0 that I am setting up.
 var request = require('request-promise');
 
