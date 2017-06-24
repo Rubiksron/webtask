@@ -1,17 +1,18 @@
 'use strict';
 var request = require('request');
 
-// var view = (function view() {/*
-//     <html>
-//     <head>
-//       <title>Welcome to Webtasks</title>
-//     </head>
-//     <body>
-//       <h1>{res.body}</h1>
-//     </body>
-//     </html>
-// */}).toString().match(/[^]*\/\*([^]*)\*\/\s*\}$/)[1];
-//
+var view = (function view() {/*
+    <html>
+    <head>
+      <title>Welcome to Webtasks</title>
+    </head>
+    <body>
+      <h1>Hello</h1>
+      <p>`${res.body}`</p>
+    </body>
+    </html>
+*/}).toString().match(/[^]*\/\*([^]*)\*\/\s*\}$/)[1];
+
 
 module.exports =
     function (cb) {
@@ -25,6 +26,6 @@ module.exports =
                     length: body.length,
                     latency: Date.now() - start,
                     response: res.body,
-                }).toString().match(/[^]*\/\*([^]*)\*\/\s*\}$/)[1];
+                });
         });
     }
