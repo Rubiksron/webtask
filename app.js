@@ -7,19 +7,19 @@ const keyword = 'food';
 const output = 'json';
 
 module.exports = function(context, cb) {
-    let lat = context.body.latitude || '0.0';
-    let long = context.body.longitude || '0.0';
+    var lat = context.body.latitude || '0.0';
+    var long = context.body.longitude || '0.0';
 
-    let radius = context.body.radius || '100';
-    let location = `${lat},${long}`;
-    let key = context.secrets.gpakey;
+    var radius = context.body.radius || '100';
+    var location = `${lat},${long}`;
+    var key = context.secrets.gpakey;
 
-    let request_url = `${googlePlacesUrl}${output}?location=${location}&radius=${radius}&keyword=${keyword}&key=${key}&opennow=true`;
+    var request_url = `${googlePlacesUrl}${output}?location=${location}&radius=${radius}&keyword=${keyword}&key=${key}&opennow=true`;
 
     request(request_url, { json: true })
         .then( function(data) {
             if(data && (data.status == 'OK' || data.status == 'ZERO_RESULTS') ) {
-                let response = {
+                var response = {
                     timestamp: new Date(),
                     latitude: lat,
                     longitude: long,
@@ -28,7 +28,7 @@ module.exports = function(context, cb) {
                 };
                 cb(null, response);
             } else {
-                let error = new Error(`${data.status}${data.error_message ? ':'+data.error_message : ''}`);
+                var error = new Error(`${data.status}${data.error_message ? ':'+data.error_message : ''}`);
                 return cb(error);
             }
         })
