@@ -13,7 +13,6 @@ module.exports =
                     length: body.length,
                     latency: Date.now() - start,
                     response: res.body,
-
                 });
         });
     }
