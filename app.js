@@ -10,7 +10,7 @@ module.exports = function (callback) {
                 callback(null, {
                     status: response.statusCode,
                     length: body.length,
-                    response: response.body
+                    SeattleForecast : response.body
                 });
                 data = JSON.parse(response.body)
                 console.log('data:', data);
