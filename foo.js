@@ -8,23 +8,20 @@ var view = (function view() {/*
     </head>
     <body>
       <h1>Hello</h1>
-      <p>`${res.body}`</p>
     </body>
     </html>
 */}).toString().match(/[^]*\/\*([^]*)\*\/\s*\}$/)[1];
 
 
 module.exports =
-    function (cb) {
-        var start = Date.now();
+    function (callback) {
         request.get('http://wttr.in/seattle', function (error, res, body) {
             if (error)
-                cb(error);
+                callback(error);
             else
-                cb(null, {
+                callback(null, {
                     status: res.statusCode,
                     length: body.length,
-                    latency: Date.now() - start,
                     response: res.body,
                 });
         });
