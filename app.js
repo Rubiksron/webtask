@@ -13,5 +13,4 @@ module.exports = function (callback) {
                     SeattleForecast: response.body,
                 });
         });
-        console.log('response.body', response.body)
     }
