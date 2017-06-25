@@ -1,7 +1,8 @@
 'use strict';
-var request = require('request');
+const request = require('request');
+const json = require('body-parser').json;
 
-var view = (function view() {/*
+let view = (function view() {/*
     <html>
     <head>
       <title>Welcome to Webtasks</title>
@@ -22,7 +23,7 @@ module.exports =
                 callback(null, {
                     status: res.statusCode,
                     length: body.length,
-                    response: res.body,
+                    response: res.body
                 });
         });
     }

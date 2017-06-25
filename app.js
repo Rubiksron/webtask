@@ -10,8 +10,10 @@ module.exports = function (callback) {
                 callback(null, {
                     status: response.statusCode,
                     length: body.length,
-                    response: response.body,
+                    response: response.body
                 });
-                alert("Current temperature in " + location + " is: " + temp_f);
+                data = JSON.parse(response.body)
+                console.log('data:', data);
+
         });
     }
