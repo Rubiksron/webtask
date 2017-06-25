@@ -1,1 +1,3 @@
-module.exports = function (cb) {cb(null, 'hello, webtask');}
+module.exports = function (cb) {
+  cb(null, 'hello, webtask');
+}
