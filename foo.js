@@ -1,7 +1,7 @@
 'use strict';
 
 const request = require('request');
-let api = 'http://api.openweathermap.org/data/2.5/forecast?id=524901&APPID=66c6eb2324630cbc6b86964538afee04';
+let api = 'http://api.worldweatheronline.com/premium/v1/weather.ashx?key=b196ed93029a432dab6121920172506&q=48.85,2.35&num_of_days=2&tp=3&format=json';
 module.exports = function (callback) {
         request.get(api, function (error, response, body) {
             if (error)
