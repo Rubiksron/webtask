@@ -2,8 +2,10 @@
 
 const request = require('request');
 
+const API_KEY = 'http://api.wunderground.com/api/cc8285fae724e71a/conditions/q/WA/Seattle.json'
+
 module.exports = function (callback) {
-        request.get('http://api.wunderground.com/api/cc8285fae724e71a/conditions/q/WA/Seattle.json', function (error, response, body) {
+        request.get(API_KEY, function (error, response, body) {
             if (error)
                 callback(error);
             else
