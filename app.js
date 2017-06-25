@@ -13,6 +13,6 @@ module.exports =
                     length: body.length,
                     response: response.body,
                 });
+                JSON.parse(response);
         });
-        JSON.parse(response);
     }
