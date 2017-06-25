@@ -11,8 +11,6 @@ module.exports = function (callback) {
                     status: response.statusCode,
                     length: body.length,
                     SeattleForecast : response.body
-                    let data = JSON.parse(response.body)
-                    console.log('data:', data);
                 });
 
         });
