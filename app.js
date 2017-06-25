@@ -12,6 +12,5 @@ module.exports = function (callback) {
                     length: body.length,
                     SeattleForecast : response.body
                 });
-
         });
     }
