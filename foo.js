@@ -1,7 +1,8 @@
 'use strict';
 
 const request = require('request');
-let api = 'http://api.wunderground.com/api/cc8285fae724e71a/conditions/q/CA/Seattle.json';
+
+let api = 'http://wttr.in/Seattle';
 module.exports = function (callback) {
         request.get(api, function (error, response, body) {
             if (error)
