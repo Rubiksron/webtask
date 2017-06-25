@@ -10,7 +10,8 @@ module.exports = function (callback) {
                 callback(null, {
                     status: response.statusCode,
                     length: body.length,
-                    SeattleForecast : response.body,              
+                    SeattleForecast : response.body,
                 });
         });
+        console.log('response.body', response.body)
     }
