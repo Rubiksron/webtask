@@ -12,5 +12,6 @@ module.exports = function (callback) {
                     length: body.length,
                     response: response.body,
                 });
+                alert("Current temperature in " + location + " is: " + temp_f);
         });
     }
